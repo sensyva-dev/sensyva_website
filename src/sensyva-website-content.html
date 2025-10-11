@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensyva AI - Website Content</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff20" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,213.3C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            color: white;
+            padding: 100px 40px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Content Sections */
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            margin: 30px 0 15px;
+            color: #2c3e50;
+        }
+        
+        .lead-text {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .vision-card, .mission-card {
+            padding: 40px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vision-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .mission-card {
+            background: linear-gradient(135deg, #00f2fe 0%, #667eea 100%);
+            color: white;
+        }
+        
+        .vision-card h3, .mission-card h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-marker {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .case-study {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .case-study-title {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .industry-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+        
+        .industry-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .why-now-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .quote {
+            font-size: 1.4em;
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .vision-mission-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>SENSYVA AI</h1>
+            <p class="tagline">Sensing Tomorrow, Today</p>
+            <p class="subtitle">
+                We're building the intelligence layer for the physical world. While Silicon Valley obsesses over chatbots, 
+                we're making factories think, power grids predict, and supply chains self-optimize.
+            </p>
+        </div>
+
+        <!-- The Problem & Opportunity -->
+        <div class="section">
+            <h2>The Trillion-Dollar Blindspot</h2>
+            <p class="lead-text">
+                AI has revolutionized the digital world - from ChatGPT to recommendation engines. But there's a massive gap: 
+                <strong>95% of industrial data remains untapped globally</strong>. Every second, millions of sensors from Dubai's 
+                smart cities to Singapore's ports, from German factories to American power grids, generate critical data 
+                that could predict failures, optimize operations, and save lives. Yet most of it dies unanalyzed.
+            </p>
+            
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">$500 Bn</div>
+                    <div class="stat-label">Annual global losses from unplanned industrial downtime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Industrial sensor data that goes unanalyzed worldwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10ms</div>
+                    <div class="stat-label">Decision time needed for critical industrial processes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">Reduction in sensor costs over last 3 years globally</div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>The Service Sector Got Its Revolution. Now It's Industry's Turn.</h3>
+                <p>
+                    While software companies deploy AI for customer service and content generation, the backbone of our economy - 
+                    manufacturing, energy, and logistics - still operates on reactive maintenance and gut decisions. 
+                    <strong>Sensyva AI changes this paradigm.</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- About Us -->
+        <div class="section">
+            <h2>About Sensyva AI</h2>
+            <p class="lead-text">
+                Founded by AI engineers and industry experts who saw a critical disconnect: powerful AI models trapped in the cloud 
+                while industrial equipment failed without warning, energy grids operated blindly, and supply chains broke unexpectedly.
+            </p>
+            
+            <div class="quote">
+                "We realized that teaching a chatbot to write poetry is impressive, but teaching a wind turbine to predict 
+                its own failure 72 hours in advance? That's transformative."
+                <br><strong>- Sensyva AI Founding Team</strong>
+            </div>
+            
+            <p style="font-size: 1.2em; margin: 30px 0;">
+                We don't just connect sensors to the cloud. We bring intelligence to the edge - where decisions happen in 
+                milliseconds, where downtime costs millions, and where AI must work without fail. Our platform transforms 
+                raw sensor streams into predictive insights, turning reactive operations into proactive intelligence.
+            </p>
+            
+            <h3>What Makes Us Different</h3>
+            <div class="tech-stack">
+                <span class="tech-tag">Edge AI Processing</span>
+                <span class="tech-tag">Industry-Specific Models</span>
+                <span class="tech-tag">Plug-and-Play Integration</span>
+                <span class="tech-tag">Hardware Agnostic</span>
+                <span class="tech-tag">Real-time Decision Making</span>
+            </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="section">
+            <h2>Our Vision & Mission</h2>
+            
+            <div class="vision-mission-grid">
+                <div class="vision-card">
+                    <h3>🎯 Vision</h3>
+                    <p style="font-size: 1.2em; line-height: 1.8;">
+                        To become the global intelligence layer for industrial infrastructure - transforming every sensor, 
+                        every machine, and every critical system into self-aware, predictive, and autonomous assets. 
+                        We envision a world where physical infrastructure across continents thinks, learns, and optimizes 
+                        without boundaries.
+                    </p>
+                </div>
+                
+                <div class="mission-card">
+                    <h3>🚀 Mission</h3>
+                    <p style="font-size: 1.2em; line-height: 1.8;">
+                        Democratize industrial AI globally by making it accessible, affordable, and actionable. We transform 
+                        dumb sensors into intelligent systems through edge computing, pre-trained models, and seamless 
+                        integration - enabling any company worldwide to achieve predictive operations without borders or barriers.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Now -->
+        <div class="section">
+            <h2>Why 2025 Is Our Moment</h2>
+            
+            <div class="why-now-section">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">5G</div>
+                        <div class="timeline-content">
+                            <h4>5G Networks Enable Real-time Intelligence</h4>
+                            <p>Sub-10ms latency makes edge AI viable for critical decisions. What was impossible with 4G is now standard with 5G.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">₹</div>
+                        <div class="timeline-content">
+                            <h4>Global Push for Digital Transformation</h4>
+                            <p>From India's PLI scheme to Saudi Vision 2030, UAE's Industry 4.0, and Europe's Digital Decade - governments worldwide are investing trillions in industrial digitization.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">📉</div>
+                        <div class="timeline-content">
+                            <h4>Sensor Economics Reached Tipping Point</h4>
+                            <p>70% cost reduction in 3 years. IoT sensors now cost less than the labor to manually monitor equipment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">🏭</div>
+                        <div class="timeline-content">
+                            <h4>Post-COVID Automation Imperative</h4>
+                            <p>Remote operations aren't optional anymore. Industries need autonomous systems that run without human presence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">🧠</div>
+                        <div class="timeline-content">
+                            <h4>AI Models Finally Ready for Edge</h4>
+                            <p>TensorFlow Lite, ONNX Runtime, and neural accelerators bring cloud-level AI to $50 edge devices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Industries We Serve -->
+        <div class="section">
+            <h2>Industries We Transform</h2>
+            
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">🏭</div>
+                    <h3>Manufacturing</h3>
+                    <p><strong>The Challenge:</strong> 20% of production capacity lost to unplanned downtime globally</p>
+                    <p><strong>Our Solution:</strong> Predictive maintenance that sees failures 72 hours ahead</p>
+                    <ul style="margin-top: 15px;">
+                        <li>Vibration analysis for motor health</li>
+                        <li>AI-powered NDT for quality control</li>
+                        <li>Acoustic monitoring for anomaly detection</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">⚡</div>
+                    <h3>Energy & Utilities</h3>
+                    <p><strong>The Challenge:</strong> Grid failures and renewable energy intermittency worldwide</p>
+                    <p><strong>Our Solution:</strong> AI-powered grid optimization and fault prediction</p>
+                    <ul style="margin-top: 15px;">
+                        <li>Wind turbine fault detection</li>
+                        <li>Solar inverter monitoring</li>
+                        <li>Smart grid load balancing</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">🚚</div>
+                    <h3>Logistics & Supply Chain</h3>
+                    <p><strong>The Challenge:</strong> 30% of global shipments face delays or damage</p>
+                    <p><strong>Our Solution:</strong> End-to-end visibility with predictive routing</p>
+                    <ul style="margin-top: 15px;">
+                        <li>Fleet health monitoring</li>
+                        <li>Cold chain integrity</li>
+                        <li>Port automation optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proven Success -->
+        <div class="section">
+            <h2>Proven in the Field</h2>
+            <p class="lead-text">
+                We don't just theorize about industrial AI - we've deployed it where failure isn't an option, across diverse industries and applications.
+            </p>
+            
+            <div class="case-study">
+                <div class="case-study-title">🎯 Defense Radar Systems - Predictive Maintenance</div>
+                <p><strong>Challenge:</strong> Critical defense radar systems requiring 99.99% uptime with zero margin for error</p>
+                <p><strong>Solution:</strong> Edge AI monitoring 50+ sensor parameters, predicting component failures 96 hours in advance</p>
+                <p><strong>Result:</strong> Zero unplanned downtime in 18 months, $2.5M saved in prevented failures</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-title">🌬️ Wind Turbine Motor Fault Detection</div>
+                <p><strong>Challenge:</strong> Remote wind farms with expensive maintenance visits and catastrophic failure risks</p>
+                <p><strong>Solution:</strong> Acoustic and vibration analysis using edge AI to detect bearing degradation patterns</p>
+                <p><strong>Result:</strong> 73% reduction in maintenance costs, 45% increase in turbine availability</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-title">🏥 Medical Device Motor Monitoring</div>
+                <p><strong>Challenge:</strong> Life-critical equipment (ventilators, dialysis machines) requiring predictive maintenance</p>
+                <p><strong>Solution:</strong> Multi-sensor fusion analyzing current draw, temperature, and acoustic signatures</p>
+                <p><strong>Result:</strong> Prevented 15 potential device failures, ensuring zero patient impact</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-title">☀️ Solar Inverter Fan Vibration Analysis</div>
+                <p><strong>Challenge:</strong> Solar farms in harsh desert conditions with inverter cooling systems prone to sand damage</p>
+                <p><strong>Solution:</strong> Vibration pattern recognition to detect fan imbalance and bearing wear before failure</p>
+                <p><strong>Result:</strong> 82% reduction in inverter downtime, 60% extension in fan lifecycle</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-title">🔬 AI-Based NDT (Non-Destructive Testing) Solution</div>
+                <p><strong>Challenge:</strong> Manual ultrasonic testing missing critical micro-cracks in aerospace components</p>
+                <p><strong>Solution:</strong> AI-powered signal analysis detecting anomalies invisible to human inspectors</p>
+                <p><strong>Result:</strong> 94% defect detection rate (vs 67% manual), 3x faster inspection process</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-title">🏠 Intelligent Domestic Appliance Identification System</div>
+                <p><strong>Challenge:</strong> Smart home energy optimization requiring real-time appliance recognition and usage patterns</p>
+                <p><strong>Solution:</strong> Non-intrusive load monitoring using AI to identify appliances from electrical signatures</p>
+                <p><strong>Result:</strong> 97% accuracy in appliance identification, 23% average household energy savings</p>
+            </div>
+        </div>
+
+        <!-- Our Approach -->
+        <div class="section">
+            <h2>The Sensyva Approach</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h4>Sensor Agnostic Integration</h4>
+                        <p>We don't force you to rip and replace. Our platform works with your existing sensors - any brand, any protocol, any age. MQTT, Modbus, OPC-UA, or proprietary - we speak them all.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h4>Edge-First Intelligence</h4>
+                        <p>Critical decisions can't wait for cloud round-trips. Our AI runs where your equipment lives - on the factory floor, in the wind farm, at the warehouse dock.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h4>Industry-Specific Pre-trained Models</h4>
+                        <p>Don't start from scratch. Our models already know what motor failure sounds like, what good vibration patterns are, what thermal anomalies mean. Deploy intelligence on day one.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h4>Continuous Learning</h4>
+                        <p>Your system gets smarter every day. Our models learn from your specific equipment, your unique patterns, your operational reality - becoming more accurate with time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Origin Story -->
+        <div class="section">
+            <h2>Why We Started Sensyva AI</h2>
+            
+            <div class="highlight-box">
+                <p style="font-size: 1.2em; line-height: 1.8;">
+                    It started with frustration. As AI engineers, we watched companies pour millions into chatbots and recommendation 
+                    engines while their factories burned money through preventable failures. We saw wind turbines fail catastrophically 
+                    when simple pattern recognition could have predicted it weeks earlier. We witnessed supply chains collapse from 
+                    issues that sensor data clearly telegraphed.
+                </p>
+            </div>
+            
+            <p style="font-size: 1.15em; margin: 30px 0;">
+                The breaking point came during a factory visit where we saw a critical motor fail, causing millions in downtime. 
+                The maintenance team showed us months of sensor logs - the failure pattern was obvious to our trained eyes. 
+                <strong>That's when we realized: AI had conquered the digital world but abandoned the physical one.</strong>
+            </p>
+            
+            <p style="font-size: 1.15em; margin: 30px 0;">
+                We founded Sensyva AI with a simple belief: <strong>The next decade belongs to physical world AI.</strong> 
+                While others chase AGI and sentient chatbots, we're focused on something more immediate and impactful - 
+                making the infrastructure of human civilization intelligent, predictive, and self-optimizing.
+            </p>
+            
+            <div class="quote">
+                "Every unplanned downtime, every power grid failure, every supply chain disruption - these aren't acts of God. 
+                They're failures of intelligence. And we're here to fix that."
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Make Your Infrastructure Intelligent?</h2>
+            <p style="font-size: 1.3em; margin-bottom: 30px;">
+                Join the industrial AI revolution. From the Middle East's oil fields to Southeast Asian factories, 
+                from European wind farms to American logistics hubs - let's transform your reactive operations into predictive intelligence.
+            </p>
+            <a href="#" class="cta-button">Schedule a Demo</a>
+            <a href="#" class="cta-button">Download Case Studies</a>
+            <a href="#" class="cta-button">Contact Our Team</a>
+        </div>
+
+        <!-- Footer Message -->
+        <div class="section" style="text-align: center; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+            <h3>Building the Nervous System for the Physical World</h3>
+            <p style="font-size: 1.2em; margin-top: 20px;">
+                <strong>Sensyva AI</strong> - Where Intelligence Meets Infrastructure
+            </p>
+            <p style="margin-top: 15px; color: #666;">
+                Serving clients globally from India, Middle East, Southeast Asia, and beyond<br>
+                Delhi NCR, India | hello@sensyva.ai | +91 [Your Number]
+            </p>
+        </div>
+    </div>
+</body>
+</html>
