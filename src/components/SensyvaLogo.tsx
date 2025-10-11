@@ -25,47 +25,46 @@ export default function SensyvaLogo({ className = '', size = 'md' }: SensyvaLogo
           <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="2" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.3"/>
           </filter>
-          {/* Hexagon gradient - white to gray */}
+          {/* Hexagon gradient - white to light gray */}
           <linearGradient id="hexagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#FFFFFF" />
-            <stop offset="25%" stopColor="#F8F9FA" />
-            <stop offset="50%" stopColor="#E9ECEF" />
-            <stop offset="75%" stopColor="#DEE2E6" />
-            <stop offset="100%" stopColor="#ADB5BD" />
+            <stop offset="30%" stopColor="#F8F9FA" />
+            <stop offset="70%" stopColor="#E9ECEF" />
+            <stop offset="100%" stopColor="#DEE2E6" />
           </linearGradient>
         </defs>
         
         {/* Main hexagon with white-to-gray gradient and dark blue border */}
         <path
-          d="M60 15 L95 32.5 L95 67.5 L60 85 L25 67.5 L25 32.5 Z"
+          d="M60 12 L98 30 L98 70 L60 88 L22 70 L22 30 Z"
           fill="url(#hexagonGradient)"
           stroke="#1E40AF"
           strokeWidth="2.5"
           filter="url(#dropshadow)"
         />
         
-        {/* Three connection points on the left side */}
-        <circle cx="35" cy="42" r="2.5" fill="#3B82F6" />
-        <circle cx="35" cy="50" r="2.5" fill="#3B82F6" />
-        <circle cx="35" cy="58" r="2.5" fill="#3B82F6" />
+        {/* Three connection points on the left side - slightly offset */}
+        <circle cx="32" cy="40" r="2.5" fill="#3B82F6" />
+        <circle cx="32" cy="50" r="2.5" fill="#3B82F6" />
+        <circle cx="32" cy="60" r="2.5" fill="#3B82F6" />
         
         {/* Circuit traces converging to center */}
         <path
-          d="M37.5 42 L55 42 L55 50 L75 50"
+          d="M34.5 40 L52 40 L52 50 L72 50"
           stroke="#3B82F6"
           strokeWidth="2"
           fill="none"
           strokeLinecap="round"
         />
         <path
-          d="M37.5 50 L55 50"
+          d="M34.5 50 L52 50"
           stroke="#3B82F6"
           strokeWidth="2"
           fill="none"
           strokeLinecap="round"
         />
         <path
-          d="M37.5 58 L55 58 L55 50"
+          d="M34.5 60 L52 60 L52 50"
           stroke="#3B82F6"
           strokeWidth="2"
           fill="none"
@@ -74,7 +73,7 @@ export default function SensyvaLogo({ className = '', size = 'md' }: SensyvaLogo
         
         {/* Main arrow extending beyond hexagon */}
         <path
-          d="M75 50 L95 50 L90 45 M95 50 L90 55"
+          d="M72 50 L92 50 L87 45 M92 50 L87 55"
           stroke="#3B82F6"
           strokeWidth="3"
           fill="none"
