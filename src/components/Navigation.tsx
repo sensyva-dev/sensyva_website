@@ -19,7 +19,6 @@ export default function Navigation() {
     { href: '#about', label: 'About' },
     { href: '#industries', label: 'Industries' },
     { href: '#case-studies', label: 'Case Studies' },
-    { href: '#case-study-download', label: 'Case Study Pack' },
     { href: '#data-gap', label: 'Data Gap Audit' },
     { href: '#contact', label: 'Contact' }
   ];

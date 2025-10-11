@@ -23,12 +23,13 @@ export default function SensyvaLogo({ className = '', size = 'md' }: SensyvaLogo
         {/* Hexagon outline with gradient */}
         <defs>
           <linearGradient id="hexagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3B82F6" />
-            <stop offset="50%" stopColor="#6366F1" />
-            <stop offset="100%" stopColor="#1E40AF" />
+            <stop offset="0%" stopColor="#FFFFFF" />
+            <stop offset="30%" stopColor="#E5E7EB" />
+            <stop offset="70%" stopColor="#9CA3AF" />
+            <stop offset="100%" stopColor="#6B7280" />
           </linearGradient>
           <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#60A5FA" />
+            <stop offset="0%" stopColor="#3B82F6" />
             <stop offset="100%" stopColor="#1E40AF" />
           </linearGradient>
         </defs>
@@ -37,7 +38,7 @@ export default function SensyvaLogo({ className = '', size = 'md' }: SensyvaLogo
         <path
           d="M60 10 L100 30 L100 70 L60 90 L20 70 L20 30 Z"
           fill="url(#hexagonGradient)"
-          stroke="url(#hexagonGradient)"
+          stroke="#374151"
           strokeWidth="2"
           className="drop-shadow-lg"
         />
