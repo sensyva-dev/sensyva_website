@@ -15,7 +15,7 @@ export default function SensyvaLogo({ className = '', size = 'md' }: SensyvaLogo
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
       <img
-        src="/sensyva-logo.svg"
+        src="/sensyva-logo.sgv.png"
         alt="SensyvaAI Logo"
         className="w-full h-full object-contain"
       />
