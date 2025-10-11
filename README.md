@@ -103,6 +103,13 @@ A placeholder lives at `public/resources/sensyva-case-study-pack.pdf`. Swap it f
 
 > **Note:** The Vite config auto-detects `GITHUB_REPOSITORY` when the build runs in Actions and adjusts the asset base path so the site loads correctly at `https://<user>.github.io/<repo>/`. When testing this behavior locally, set `GITHUB_REPOSITORY=owner/repo npm run build`.
 
+### Custom Domain (sensyva.com)
+
+- The repo ships with a `CNAME` file that tells GitHub Pages to serve `sensyva.com`.
+- At your DNS provider, point the apex (`sensyva.com`) to GitHub with the four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+- Set `www` as a CNAME to `sensyva-dev.github.io.` and remove conflicting records.
+- After DNS propagates, re-verify the custom domain in **Settings → Pages** and GitHub will issue HTTPS automatically.
+
 ## Pushing the Project to GitHub
 
 ```bash
