@@ -20,59 +20,60 @@ export default function SensyvaLogo({ className = '', size = 'md' }: SensyvaLogo
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
       >
-        {/* Hexagon outline with gradient */}
+        {/* Drop shadow filter */}
         <defs>
+          <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.3"/>
+          </filter>
           <linearGradient id="hexagonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#FFFFFF" />
-            <stop offset="30%" stopColor="#E5E7EB" />
-            <stop offset="70%" stopColor="#9CA3AF" />
-            <stop offset="100%" stopColor="#6B7280" />
-          </linearGradient>
-          <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3B82F6" />
-            <stop offset="100%" stopColor="#1E40AF" />
+            <stop offset="30%" stopColor="#F3F4F6" />
+            <stop offset="70%" stopColor="#D1D5DB" />
+            <stop offset="100%" stopColor="#9CA3AF" />
           </linearGradient>
         </defs>
         
-        {/* Hexagon shape */}
+        {/* Hexagon shape with gradient and dark blue border */}
         <path
           d="M60 10 L100 30 L100 70 L60 90 L20 70 L20 30 Z"
           fill="url(#hexagonGradient)"
-          stroke="#374151"
-          strokeWidth="2"
-          className="drop-shadow-lg"
+          stroke="#1E40AF"
+          strokeWidth="2.5"
+          filter="url(#dropshadow)"
         />
         
-        {/* Circuit board elements */}
-        {/* Input circles */}
-        <circle cx="30" cy="40" r="3" fill="url(#circuitGradient)" />
-        <circle cx="30" cy="50" r="3" fill="url(#circuitGradient)" />
-        <circle cx="30" cy="60" r="3" fill="url(#circuitGradient)" />
+        {/* Circuit board elements - three connection points on left */}
+        <circle cx="30" cy="40" r="2.5" fill="#3B82F6" />
+        <circle cx="30" cy="50" r="2.5" fill="#3B82F6" />
+        <circle cx="30" cy="60" r="2.5" fill="#3B82F6" />
         
-        {/* Circuit traces */}
+        {/* Circuit traces - converging paths */}
         <path
-          d="M33 40 L50 40 L50 50 L70 50"
-          stroke="url(#circuitGradient)"
+          d="M32.5 40 L50 40 L50 50 L70 50"
+          stroke="#3B82F6"
           strokeWidth="2"
           fill="none"
+          strokeLinecap="round"
         />
         <path
-          d="M33 50 L50 50"
-          stroke="url(#circuitGradient)"
+          d="M32.5 50 L50 50"
+          stroke="#3B82F6"
           strokeWidth="2"
           fill="none"
+          strokeLinecap="round"
         />
         <path
-          d="M33 60 L50 60 L50 50"
-          stroke="url(#circuitGradient)"
+          d="M32.5 60 L50 60 L50 50"
+          stroke="#3B82F6"
           strokeWidth="2"
           fill="none"
+          strokeLinecap="round"
         />
         
-        {/* Main arrow */}
+        {/* Main arrow extending beyond hexagon */}
         <path
-          d="M70 50 L85 50 L80 45 M85 50 L80 55"
-          stroke="url(#circuitGradient)"
+          d="M70 50 L90 50 L85 45 M90 50 L85 55"
+          stroke="#3B82F6"
           strokeWidth="3"
           fill="none"
           strokeLinecap="round"
