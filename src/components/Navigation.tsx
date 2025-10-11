@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Brain, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import SensyvaLogo from './SensyvaLogo';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +18,6 @@ export default function Navigation() {
     { href: '#problem', label: 'The Opportunity' },
     { href: '#about', label: 'About' },
     { href: '#industries', label: 'Industries' },
-    { href: '#medical-devices', label: 'Medical Devices' },
     { href: '#case-studies', label: 'Case Studies' },
     { href: '#case-study-download', label: 'Case Study Pack' },
     { href: '#data-gap', label: 'Data Gap Audit' },
@@ -28,15 +28,15 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-900/95 backdrop-blur-lg shadow-2xl'
+          ? 'bg-gradient-to-r from-slate-900/95 via-blue-900/95 to-slate-900/95 backdrop-blur-lg shadow-2xl border-b border-blue-500/20'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="bg-gradient-to-br from-blue-500 to-violet-600 p-2 rounded-xl group-hover:scale-110 transition-transform">
-              <Brain className="w-6 h-6 text-white" />
+            <div className="group-hover:scale-110 transition-transform">
+              <SensyvaLogo size="md" />
             </div>
             <span className="text-xl font-bold text-white">SENSYVA AI</span>
           </a>

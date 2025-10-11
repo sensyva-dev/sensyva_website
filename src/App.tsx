@@ -5,7 +5,6 @@ import About from './components/About';
 import Vision from './components/Vision';
 import WhyNow from './components/WhyNow';
 import Industries from './components/Industries';
-import MedicalDeviceService from './components/MedicalDeviceService';
 import CaseStudies from './components/CaseStudies';
 import CaseStudyDownload from './components/CaseStudyDownload';
 import Approach from './components/Approach';
@@ -24,7 +23,6 @@ function App() {
       <Vision />
       <WhyNow />
       <Industries />
-      <MedicalDeviceService />
       <CaseStudies />
       <CaseStudyDownload />
       <Approach />

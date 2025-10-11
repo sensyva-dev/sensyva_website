@@ -1,4 +1,5 @@
-import { Brain, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Cpu } from 'lucide-react';
+import SensyvaLogo from './SensyvaLogo';
 
 export default function Footer() {
   return (
@@ -8,9 +9,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex justify-center items-center gap-4 mb-6">
-            <div className="bg-gradient-to-br from-blue-500 to-violet-600 p-3 rounded-2xl">
-              <Brain className="w-12 h-12 text-white" />
-            </div>
+            <SensyvaLogo size="lg" />
             <h3 className="text-4xl font-black">SENSYVA AI</h3>
           </div>
           <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-violet-300 to-cyan-300 mb-3 font-light">
@@ -39,7 +38,7 @@ export default function Footer() {
 
           <div className="text-center group">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-violet-400 transition-all">
-              <Brain className="w-10 h-10 text-violet-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <Cpu className="w-10 h-10 text-violet-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
               <p className="text-blue-100 font-semibold mb-2">Industrial AI Solutions</p>
               <p className="text-sm text-blue-300">Edge computing & predictive analytics</p>
             </div>
