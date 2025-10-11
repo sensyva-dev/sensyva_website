@@ -4,7 +4,7 @@ import { getSupabaseClient } from '../lib/createSupabaseClient';
 
 type RequestStatus = 'idle' | 'pending' | 'success' | 'error';
 
-const CASE_STUDY_BUNDLE_URL = '/resources/sensyva-case-study-pack.pdf';
+const CASE_STUDY_BUNDLE_URL = `${import.meta.env.BASE_URL}resources/sensyva-case-study-pack.pdf`;
 
 export default function CaseStudyDownload() {
   const supabaseClient = getSupabaseClient();

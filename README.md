@@ -101,6 +101,8 @@ A placeholder lives at `public/resources/sensyva-case-study-pack.pdf`. Swap it f
 4. Commit the workflow file—GitHub will build the site and publish `dist/` on the `gh-pages` branch automatically.
 5. The hosted URL appears back in **Settings → Pages** once the workflow succeeds.
 
+> **Note:** The Vite config auto-detects `GITHUB_REPOSITORY` when the build runs in Actions and adjusts the asset base path so the site loads correctly at `https://<user>.github.io/<repo>/`. When testing this behavior locally, set `GITHUB_REPOSITORY=owner/repo npm run build`.
+
 ## Pushing the Project to GitHub
 
 ```bash
