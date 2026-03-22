@@ -13,7 +13,6 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: '#problem', label: 'The Opportunity' },
     { href: '#about', label: 'About' },
     { href: '#sovereign-ai', label: 'Solutions' },
     { href: '#industries', label: 'Industries' },

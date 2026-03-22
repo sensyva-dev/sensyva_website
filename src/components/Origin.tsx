@@ -2,43 +2,58 @@ import { Quote } from 'lucide-react';
 
 export default function Origin() {
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-5"></div>
+    <section className="py-28 bg-white relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-bold mb-12 text-center">
-          Why We Started <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Sensyva AI</span>
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="h-px w-8 bg-violet-500" />
+          <span className="text-violet-600 text-sm font-semibold uppercase tracking-widest">Our Origin</span>
+        </div>
+
+        <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-12 leading-tight">
+          Why We Started{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
+            Sensyva AI
+          </span>
         </h2>
 
-        <div className="bg-white/10 backdrop-blur-sm p-10 rounded-3xl border border-white/20 mb-12">
-          <p className="text-xl leading-relaxed mb-6">
-            It started with frustration. As AI engineers, we watched companies pour millions into chatbots and recommendation
-            engines while their factories burned money through preventable failures. We saw wind turbines fail catastrophically
-            when simple pattern recognition could have predicted it weeks earlier. We witnessed supply chains collapse from
-            issues that sensor data clearly telegraphed.
-          </p>
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-gray-50 border border-gray-100 rounded-2xl p-8">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              It started with frustration. As AI engineers, we watched companies pour millions into chatbots
+              and recommendation engines while their factories burned money through preventable failures. We saw
+              wind turbines fail catastrophically when simple pattern recognition could have predicted it weeks earlier.
+            </p>
+          </div>
+          <div className="bg-gray-50 border border-gray-100 rounded-2xl p-8">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We witnessed supply chains collapse from issues that sensor data clearly telegraphed. The breaking point
+              came during a factory visit — a critical motor failed, causing millions in downtime. The maintenance team
+              showed us months of sensor logs.{' '}
+              <strong className="text-gray-900">The failure pattern was obvious to our trained eyes.</strong>
+            </p>
+          </div>
         </div>
 
-        <div className="space-y-8 mb-12">
-          <p className="text-lg leading-relaxed">
-            The breaking point came during a factory visit where we saw a critical motor fail, causing millions in downtime.
-            The maintenance team showed us months of sensor logs - the failure pattern was obvious to our trained eyes.
-            <strong className="text-blue-300"> That's when we realized: AI had conquered the digital world but abandoned the physical one.</strong>
-          </p>
-
-          <p className="text-lg leading-relaxed">
-            We founded Sensyva AI with a simple belief: <strong className="text-cyan-300">The next decade belongs to physical world AI.</strong>
-            While others chase AGI and sentient chatbots, we're focused on something more immediate and impactful -
-            making the infrastructure of human civilization intelligent, predictive, and self-optimizing.
-          </p>
-        </div>
-
-        <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm p-8 rounded-2xl border-l-4 border-blue-400">
-          <Quote className="w-12 h-12 text-blue-400 mb-4" />
-          <p className="text-2xl italic leading-relaxed">
-            "Every unplanned downtime, every power grid failure, every supply chain disruption - these aren't acts of God.
-            They're failures of intelligence. And we're here to fix that."
-          </p>
+        <div className="bg-slate-950 rounded-2xl p-10 relative overflow-hidden mb-10">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.06)_1px,transparent_1px)] bg-[size:32px_32px]" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
+          <div className="relative z-10">
+            <p className="text-slate-400 text-lg leading-relaxed mb-6">
+              We founded Sensyva AI with a simple belief:{' '}
+              <strong className="text-white">The next decade belongs to physical-world AI.</strong>{' '}
+              While others chase AGI and sentient chatbots, we're focused on something more immediate and impactful —
+              making the infrastructure of human civilization intelligent, predictive, and self-optimizing.
+            </p>
+            <div className="border-l-2 border-violet-500 pl-6">
+              <Quote className="w-6 h-6 text-violet-400 mb-3" />
+              <p className="text-xl text-white italic leading-relaxed">
+                "Every unplanned downtime, every power grid failure, every supply chain disruption — these aren't
+                acts of God. They're failures of intelligence. And we're here to fix that."
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
