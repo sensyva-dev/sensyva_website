@@ -1,96 +1,142 @@
 import { Shield, Wind, Activity, Sun, Search, Home } from 'lucide-react';
 
+const cases = [
+  {
+    icon: Shield,
+    tag: 'Defence',
+    title: 'Defense Radar Systems — Predictive Maintenance',
+    challenge: 'Critical defense radar systems requiring 99.99% uptime with zero margin for error.',
+    solution: 'Edge AI monitoring 50+ sensor parameters, predicting component failures 96 hours in advance.',
+    result: 'Zero unplanned downtime in 18 months',
+    metric: '$2.5M saved',
+    accent: 'border-red-500/40 hover:border-red-500/60',
+    tagColor: 'bg-red-500/10 text-red-400',
+    iconBg: 'bg-red-500/15',
+    iconColor: 'text-red-400',
+  },
+  {
+    icon: Wind,
+    tag: 'Energy',
+    title: 'Wind Turbine Motor Fault Detection',
+    challenge: 'Remote wind farms with expensive maintenance visits and catastrophic failure risks.',
+    solution: 'Acoustic and vibration analysis using edge AI to detect bearing degradation patterns.',
+    result: '73% reduction in maintenance costs',
+    metric: '+45% availability',
+    accent: 'border-emerald-500/40 hover:border-emerald-500/60',
+    tagColor: 'bg-emerald-500/10 text-emerald-400',
+    iconBg: 'bg-emerald-500/15',
+    iconColor: 'text-emerald-400',
+  },
+  {
+    icon: Activity,
+    tag: 'Healthcare',
+    title: 'Medical Device Motor Monitoring',
+    challenge: 'Life-critical equipment (ventilators, dialysis machines) requiring predictive maintenance.',
+    solution: 'Multi-sensor fusion analyzing current draw, temperature, and acoustic signatures.',
+    result: '15 potential device failures prevented',
+    metric: 'Zero patient impact',
+    accent: 'border-blue-500/40 hover:border-blue-500/60',
+    tagColor: 'bg-blue-500/10 text-blue-400',
+    iconBg: 'bg-blue-500/15',
+    iconColor: 'text-blue-400',
+  },
+  {
+    icon: Sun,
+    tag: 'Solar',
+    title: 'Solar Inverter Fan Vibration Analysis',
+    challenge: 'Solar farms in harsh desert conditions with inverter cooling systems prone to sand damage.',
+    solution: 'Vibration pattern recognition to detect fan imbalance and bearing wear before failure.',
+    result: '82% reduction in inverter downtime',
+    metric: '60% longer fan lifecycle',
+    accent: 'border-amber-500/40 hover:border-amber-500/60',
+    tagColor: 'bg-amber-500/10 text-amber-400',
+    iconBg: 'bg-amber-500/15',
+    iconColor: 'text-amber-400',
+  },
+  {
+    icon: Search,
+    tag: 'Aerospace',
+    title: 'AI-Based NDT (Non-Destructive Testing)',
+    challenge: 'Manual ultrasonic testing missing critical micro-cracks in aerospace components.',
+    solution: 'AI-powered signal analysis detecting anomalies invisible to human inspectors.',
+    result: '94% defect detection rate (vs 67% manual)',
+    metric: '3× faster inspections',
+    accent: 'border-violet-500/40 hover:border-violet-500/60',
+    tagColor: 'bg-violet-500/10 text-violet-400',
+    iconBg: 'bg-violet-500/15',
+    iconColor: 'text-violet-400',
+  },
+  {
+    icon: Home,
+    tag: 'Smart Grid',
+    title: 'Intelligent Appliance Identification System',
+    challenge: 'Smart home energy optimization requiring real-time appliance recognition.',
+    solution: 'Non-intrusive load monitoring using AI to identify appliances from electrical signatures.',
+    result: '97% appliance identification accuracy',
+    metric: '23% energy savings',
+    accent: 'border-teal-500/40 hover:border-teal-500/60',
+    tagColor: 'bg-teal-500/10 text-teal-400',
+    iconBg: 'bg-teal-500/15',
+    iconColor: 'text-teal-400',
+  },
+];
+
 export default function CaseStudies() {
-  const cases = [
-    {
-      icon: Shield,
-      title: 'Defense Radar Systems - Predictive Maintenance',
-      challenge: 'Critical defense radar systems requiring 99.99% uptime with zero margin for error',
-      solution: 'Edge AI monitoring 50+ sensor parameters, predicting component failures 96 hours in advance',
-      result: 'Zero unplanned downtime in 18 months, $2.5M saved in prevented failures',
-      color: 'from-red-500 to-orange-600'
-    },
-    {
-      icon: Wind,
-      title: 'Wind Turbine Motor Fault Detection',
-      challenge: 'Remote wind farms with expensive maintenance visits and catastrophic failure risks',
-      solution: 'Acoustic and vibration analysis using edge AI to detect bearing degradation patterns',
-      result: '73% reduction in maintenance costs, 45% increase in turbine availability',
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      icon: Activity,
-      title: 'Medical Device Motor Monitoring',
-      challenge: 'Life-critical equipment (ventilators, dialysis machines) requiring predictive maintenance',
-      solution: 'Multi-sensor fusion analyzing current draw, temperature, and acoustic signatures',
-      result: 'Prevented 15 potential device failures, ensuring zero patient impact',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      icon: Sun,
-      title: 'Solar Inverter Fan Vibration Analysis',
-      challenge: 'Solar farms in harsh desert conditions with inverter cooling systems prone to sand damage',
-      solution: 'Vibration pattern recognition to detect fan imbalance and bearing wear before failure',
-      result: '82% reduction in inverter downtime, 60% extension in fan lifecycle',
-      color: 'from-yellow-500 to-orange-600'
-    },
-    {
-      icon: Search,
-      title: 'AI-Based NDT (Non-Destructive Testing) Solution',
-      challenge: 'Manual ultrasonic testing missing critical micro-cracks in aerospace components',
-      solution: 'AI-powered signal analysis detecting anomalies invisible to human inspectors',
-      result: '94% defect detection rate (vs 67% manual), 3x faster inspection process',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      icon: Home,
-      title: 'Intelligent Domestic Appliance Identification System',
-      challenge: 'Smart home energy optimization requiring real-time appliance recognition and usage patterns',
-      solution: 'Non-intrusive load monitoring using AI to identify appliances from electrical signatures',
-      result: '97% accuracy in appliance identification, 23% average household energy savings',
-      color: 'from-teal-500 to-blue-600'
-    }
-  ];
-
   return (
-    <section id="case-studies" className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-          Proven in the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">Field</span>
-        </h2>
+    <section id="case-studies" className="py-28 bg-slate-950 relative">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.04)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
 
-        <p className="text-xl text-gray-600 mb-16 max-w-3xl">
-          We don't just theorize about industrial AI - we've deployed it where failure isn't an option, across diverse industries and applications.
-        </p>
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="h-px w-8 bg-violet-500" />
+          <span className="text-violet-400 text-sm font-semibold uppercase tracking-widest">Case Studies</span>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {cases.map((caseStudy, index) => (
+        <div className="flex flex-col md:flex-row md:items-end gap-6 mb-16">
+          <div className="flex-1">
+            <h2 className="text-5xl md:text-6xl font-black text-white leading-tight">
+              Proven in the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">Field</span>
+            </h2>
+          </div>
+          <p className="md:max-w-sm text-slate-400 leading-relaxed">
+            Deployed where failure isn't an option — across defence, energy, healthcare, and beyond.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {cases.map((c, i) => (
             <div
-              key={index}
-              className="group bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-violet-300 transform hover:-translate-y-2 hover:rotate-1"
+              key={i}
+              className={`group bg-white/3 border ${c.accent} rounded-2xl p-7 transition-all duration-300 hover:bg-white/5`}
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className={`flex-shrink-0 w-14 h-14 bg-gradient-to-br ${caseStudy.color} rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                  <caseStudy.icon className="w-7 h-7 text-white" />
+              <div className="flex items-start justify-between mb-6">
+                <div className={`w-10 h-10 ${c.iconBg} rounded-xl flex items-center justify-center`}>
+                  <c.icon className={`w-5 h-5 ${c.iconColor}`} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 flex-1 group-hover:text-violet-700 transition-colors">{caseStudy.title}</h3>
+                <span className={`text-xs font-bold px-3 py-1 rounded-full ${c.tagColor}`}>{c.tag}</span>
               </div>
 
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wide">Challenge:</p>
-                  <p className="text-gray-600 leading-relaxed">{caseStudy.challenge}</p>
-                </div>
+              <h3 className="text-lg font-bold text-white mb-5 leading-snug">{c.title}</h3>
 
+              <div className="space-y-4 mb-6">
                 <div>
-                  <p className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wide">Solution:</p>
-                  <p className="text-gray-600 leading-relaxed">{caseStudy.solution}</p>
+                  <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest mb-1">Challenge</p>
+                  <p className="text-sm text-slate-400 leading-relaxed">{c.challenge}</p>
                 </div>
+                <div>
+                  <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest mb-1">Solution</p>
+                  <p className="text-sm text-slate-400 leading-relaxed">{c.solution}</p>
+                </div>
+              </div>
 
-                <div className="bg-gradient-to-r from-blue-50 to-violet-50 p-4 rounded-xl border border-violet-100">
-                  <p className="text-sm font-bold text-violet-900 mb-2 uppercase tracking-wide">Result:</p>
-                  <p className="text-gray-900 leading-relaxed font-semibold">{caseStudy.result}</p>
+              {/* Result strip */}
+              <div className="border-t border-white/8 pt-5 flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest mb-1">Outcome</p>
+                  <p className="text-sm font-semibold text-white">{c.result}</p>
                 </div>
+                <span className={`text-xs font-bold px-3 py-1.5 rounded-lg ${c.tagColor} flex-shrink-0`}>{c.metric}</span>
               </div>
             </div>
           ))}

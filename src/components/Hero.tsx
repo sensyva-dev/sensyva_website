@@ -1,53 +1,99 @@
-import { FileDown, Zap } from 'lucide-react';
+import { FileDown, ArrowRight } from 'lucide-react';
+
+const metrics = [
+  { value: '$500Bn', label: 'Industrial losses / yr' },
+  { value: '95%', label: 'Sensor data wasted' },
+  { value: '72hrs', label: 'Failure prediction lead time' },
+  { value: '18mo', label: 'Zero downtime — Defence project' },
+];
+
+const marqueeItems = [
+  'Manufacturing', 'Energy & Utilities', 'Ministry of Defence',
+  'Medical Devices', 'Logistics', 'Solar & Wind', 'Smart Cities',
+  'Aerospace NDT', 'BFSI', 'Government',
+];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-violet-900 to-blue-900">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-violet-600/20 to-cyan-600/20 animate-gradient"></div>
-      </div>
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-slate-950">
+      {/* Grid background */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.04)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900"></div>
+      {/* Glow orbs */}
+      <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-violet-600/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/30 rounded-full blur-3xl animate-pulse-slow animation-delay-1000"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
-        <div className="flex justify-center mb-8 animate-fade-in">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center gap-3 shadow-2xl">
-            <span className="text-blue-300 text-sm font-medium tracking-wide">Industrial AI Solutions</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 w-full">
+        {/* Top badge */}
+        <div className="flex justify-center mb-10 animate-fade-in">
+          <div className="inline-flex items-center gap-2 border border-violet-500/30 bg-violet-500/10 rounded-full px-5 py-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-violet-300 text-sm font-medium tracking-wide">Sovereign · Edge · Industrial AI</span>
           </div>
         </div>
 
-        <h1 className="text-7xl md:text-9xl font-black text-white mb-6 animate-slide-up tracking-tight">
-          SENSYVA AI
-        </h1>
+        {/* Headline */}
+        <div className="text-center mb-8 animate-slide-up">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tight mb-6">
+            SENSYVA
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400">
+              AI
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-400 font-light max-w-3xl mx-auto leading-relaxed">
+            We give industrial infrastructure a nervous system — predictive, sovereign,
+            and deployed at the edge. Built for factories, grids, and defence-grade environments.
+          </p>
+        </div>
 
-        <p className="text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-violet-300 to-cyan-300 mb-8 animate-slide-up animation-delay-200 font-light">
-          Sensing Tomorrow, Today
-        </p>
-
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed animate-slide-up animation-delay-400">
-          We're building the intelligence layer for the physical world. While Silicon Valley obsesses over chatbots,
-          we're making factories think, power grids predict, and supply chains self-optimize.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up animation-delay-600">
-          <a href="#contact" className="group bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50 flex items-center justify-center gap-3">
-            <Zap className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-            <span>Schedule Demo</span>
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20 animate-slide-up animation-delay-200">
+          <a
+            href="#contact"
+            className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 hover:shadow-xl hover:shadow-violet-600/30"
+          >
+            Schedule a Demo
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-          <a href="#case-study-download" className="group bg-white/10 backdrop-blur-xl hover:bg-white/20 text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-3">
-            <FileDown className="w-6 h-6 group-hover:translate-y-1 transition-transform" />
-            <span>Download Case Studies</span>
+          <a
+            href="#case-study-download"
+            className="group inline-flex items-center justify-center gap-2 border border-white/10 hover:border-white/25 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200"
+          >
+            <FileDown className="w-4 h-4" />
+            Download Case Studies
           </a>
+        </div>
+
+        {/* Metrics strip */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16 animate-slide-up animation-delay-400">
+          {metrics.map((m) => (
+            <div key={m.label} className="bg-white/5 border border-white/8 rounded-xl p-5 text-center backdrop-blur-sm">
+              <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400 mb-1">
+                {m.value}
+              </div>
+              <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">{m.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Marquee */}
+        <div className="relative overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
+          <p className="text-center text-slate-600 text-xs uppercase tracking-[0.3em] mb-4 font-semibold">Sectors We Serve</p>
+          <div className="flex gap-8 animate-marquee whitespace-nowrap">
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
+              <span key={i} className="inline-flex items-center gap-2 text-slate-500 text-sm font-medium">
+                <span className="w-1 h-1 rounded-full bg-violet-500" />
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
