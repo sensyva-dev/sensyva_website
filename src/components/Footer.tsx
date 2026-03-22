@@ -16,6 +16,9 @@ export default function Footer() {
             Building the Nervous System for the Physical World
           </p>
           <p className="text-xl text-blue-200">Where Intelligence Meets Infrastructure</p>
+          <p className="text-sm text-blue-300/80 mt-4 max-w-2xl mx-auto">
+            Sensyva specializes in Sovereign AI, bridging the gap between cutting-edge LLMs and the rigorous security standards of the Indian Government and Defense sectors.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10 mb-12">

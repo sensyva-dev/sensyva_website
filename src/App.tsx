@@ -8,6 +8,7 @@ import Industries from './components/Industries';
 import CaseStudies from './components/CaseStudies';
 import CaseStudyDownload from './components/CaseStudyDownload';
 import Approach from './components/Approach';
+import SovereignAI from './components/SovereignAI';
 import Origin from './components/Origin';
 import DataGapAudit from './components/DataGapAudit';
 import CTA from './components/CTA';
@@ -26,6 +27,7 @@ function App() {
       <CaseStudies />
       <CaseStudyDownload />
       <Approach />
+      <SovereignAI />
       <Origin />
       <DataGapAudit />
       <CTA />
