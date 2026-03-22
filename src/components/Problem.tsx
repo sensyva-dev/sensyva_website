@@ -15,7 +15,7 @@ export default function Problem() {
         {/* Label */}
         <div className="flex items-center gap-3 mb-6">
           <span className="h-px w-8 bg-violet-500" />
-          <span className="text-violet-600 text-sm font-semibold uppercase tracking-widest">The Opportunity</span>
+          <span className="text-violet-600 text-sm font-semibold uppercase tracking-widest">The Market Gap</span>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
